@@ -1,0 +1,109 @@
+@import "../Common/Common.css";
+
+.Logo {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    cursor: pointer;
+    padding: 0 20px;
+}
+
+#NavBar {
+    height: 100%;
+    display: flex;
+    width: 100%;
+    margin: 0 80px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Keyframe for fade-out (navbar becomes fixed) */
+@keyframes ToFixed {
+    0% {
+        opacity: 1;
+        position: absolute;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        position: fixed;
+        top: 0;
+    }
+}
+
+/* Keyframe for fade-in (navbar returns to static) */
+@keyframes ToAbsolute {
+    0% {
+        opacity: 1;
+        position: fixed;
+        top: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        position: absolute;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7%;
+    width: 100%;
+    position: absolute;
+    background-color: var(--secondary-color);
+    top: 0;
+    left: 0;
+}
+
+/* When navbar becomes fixed (floating), trigger fade-out animation */
+nav.fixed {
+    animation: ToFixed 0.3s ease forwards;
+}
+
+/* When navbar returns to static, trigger fade-in animation */
+nav.static {
+    animation: ToAbsolute 0.3s ease forwards;
+}
+
+.NavBarButton {
+    background-color: var(--tertiary-color);
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    transition: 1s;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+button.NavBarButton:hover{
+    background-color: var(--quaternary-color);
+}
+
+.NavBarButtonText {
+    color: var(--primary-color);
+    font-size: x-large;
+    text-transform: uppercase;
+    font-family: "Droid Serif", serif;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Add vertical bar to all but the first button */
+.NavBarButton:not(:first-child)::before {
+    --button-separator-height: 70%;
+    content: "";
+    position: absolute;
+    left: 0; /* align at left edge */
+    top: calc((100% - var(--button-separator-height)) / 2);
+    height: var(--button-separator-height);
+    width: 2px;
+    background-color: var(--quaternary-color); /* separator color */
+}

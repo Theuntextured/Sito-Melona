@@ -1,78 +1,97 @@
 @import "../Common/Common.css";
 
-* {box-sizing:border-box}
-
-/* Slideshow container */
-.slideshow-container {
+#SlideshowOuterContainer {
+    margin: 0;
     width: 100%;
-    height: 156px;
+    aspect-ratio: 16/6;
+    /*aspect-ratio: 4/3; */
     position: relative;
-    margin: auto;
 }
 
-/* Hide the images by default */
-.mySlides {
-    display: none;
+@keyframes verticalPan {
+    from {
+        object-position: center top;
+    }
+    to {
+        object-position: center center;
+    }
 }
 
-/* Next & previous buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-}
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
+.SlideshowImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     position: absolute;
     top: 0;
+    left: 0;
+    object-position: center top;
 }
 
-/* The dots/bullets/indicators */
+.SlideAnimationInterface {
+    animation: verticalPan 10s ease forwards;
+    animation-delay: 3s;
+}
+
+.ActiveSlide {
+    opacity: 100%;
+    transition: opacity 3s ease;
+}
+
+.InactiveSlide {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+    animation: none;
+}
+
+.SlideshowControl {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    padding: 8px;
+    
+    font-size: 250%;
+    background-color: rgba(255, 255, 255, 0.5);
+    
+    transition: 0.4s ease;
+}
+
+.SlideshowControl:hover {
+    background-color: rgba(255, 255, 255, 0.8);    
+    font-size: 270%;
+}
+#SlideshowNext {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+}
+#SlideshowPrev {
+    left: 0;
+    border-radius: 0 4px 4px 0;
+}
+
 .dot {
     cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
+    height: 16px;
+    width: 16px;
+    margin: 0 4px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
+    outline: #343434 solid 0;
 }
 
-.active, .dot:hover {
+.ActiveDot {
+    /*outline-width: 2px;*/
+    transform: scale(125%);
+}
+
+.dot:hover {
     background-color: #717171;
 }
-
-/* Fading animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+#HomePageSlideshowDotContainer{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}

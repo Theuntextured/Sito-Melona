@@ -1,64 +1,77 @@
+const SlideCount = 6;
+let CurrentSlideIndex = -1;
 
-SetupSlides(18);
-let slideIndex = 1;
-showSlides(slideIndex);
+let SlideTimer = null;
+const SLIDE_INTERVAL = 12; // In seconds
 
-/*
-FORMAT:
-                <div class="mySlides fade">
-                    <div class="numbertext">1 / 3</div>
-                    <img src="../Resources/Showcase1.jpg" style="width:100%">
-                </div>
-                
-AND:
-                <span class="dot" onclick="currentSlide(3)"></span>
- */
+SetupSlides();
+StartSlideshowTimer();
 
-function SetupSlides(ImageCount){
-    let Container = document.getElementById("HomePageSlideshowContainer");
-    let DotContainer = document.getElementById("HomePageSlideshowDots");
-    let FirstArrow = Container.firstChild;
+function SetupSlides() {
+    const ImageContainer = document.getElementById('HomePageSlideshowContainer');
+    const DotContainer = document.getElementById('HomePageSlideshowDotContainer');
     
-    for(let i = 1; i <= ImageCount; i++) {
-        let div = document.createElement("div");
-        div.classList.add("mySlides");
-        div.classList.add("fade");
-        let NumberText = document.createElement("div");
-        let img = document.createElement("img");
-        img.src = "../Resources/Showcase" + i.toString() + ".jpg";
-        img.style.width = "100%";
-        div.appendChild(img);
-        Container.insertBefore(div, FirstArrow);
-        
-        let Dot = document.createElement("span");
+    for(let i = 1; i <= SlideCount; i++) {
+        let Image = document.createElement("img");
+        Image.src = "../Resources/Showcase" + i.toString() + ".png";
+        Image.classList.add("SlideshowImage");
+        Image.alt = "Showcase " + i.toString();
+        ImageContainer.appendChild(Image);
+        Image.classList.add("InactiveSlide");
+
+
+        const Dot = document.createElement("span");
         Dot.classList.add("dot");
-        Dot.Onclick = function(){currentSlide(i);};
+        Dot.onclick = function(){ SetSlide(i - 1); };
         DotContainer.appendChild(Dot);
     }
+    SetSlide(0);
 }
 
-// Next/previous controls
-function plusSlides(n) {
-    showSlides(slideIndex += n);
+function ChangeSlide(Amount) {
+    SetSlide((CurrentSlideIndex + SlideCount + Amount) % SlideCount);
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
+function SetSlide(NewIndex) {
+    const Images = document.getElementById("HomePageSlideshowContainer").children;
+    const Dots = document.getElementById("HomePageSlideshowDotContainer").children;
 
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    // Remove current slide
+    if (CurrentSlideIndex >= 0) {
+        const PrevSlide = Images[CurrentSlideIndex];
+
+        // Freeze the current object-position based on animation progress
+        const computedStyle = getComputedStyle(PrevSlide);
+        const currentPosition = computedStyle.objectPosition;
+        PrevSlide.style.animation = "none"; // Stop animation
+        PrevSlide.style.objectPosition = currentPosition; // Lock in current position
+
+        PrevSlide.classList.remove('ActiveSlide');
+        PrevSlide.classList.add("InactiveSlide");
+        Dots[CurrentSlideIndex].classList.remove("ActiveDot");
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+
+    // Set new slide
+    CurrentSlideIndex = NewIndex;
+    const NewSlide = Images[CurrentSlideIndex];
+
+    NewSlide.classList.add('ActiveSlide');
+    NewSlide.classList.remove('InactiveSlide');
+    Dots[CurrentSlideIndex].classList.add('ActiveDot');
+
+    // Restart animation by forcing reflow
+    NewSlide.style.animation = "none";
+    void NewSlide.offsetWidth; // trigger reflow
+    NewSlide.style.animation = "verticalPan 10s ease-in-out forwards";
+    NewSlide.style.objectPosition = "center top"; // reset position at start
+}
+
+function StartSlideshowTimer() {
+    if (SlideTimer) {
+        clearTimeout(SlideTimer); // clear existing timer
     }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
+    SlideTimer = setTimeout(() => {
+        ChangeSlide(1);
+        StartSlideshowTimer(); // schedule next cycle
+    }, SLIDE_INTERVAL * 1000);
 }

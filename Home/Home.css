@@ -29,17 +29,17 @@
 
 .SlideAnimationInterface {
     animation: verticalPan 10s ease forwards;
-    animation-delay: 3s;
+    animation-delay: 5s;
 }
 
 .ActiveSlide {
     opacity: 100%;
-    transition: opacity 3s ease;
+    transition: opacity 5s ease;
 }
 
 .InactiveSlide {
     opacity: 0;
-    transition: opacity 1s ease-out;
+    transition: opacity 3s ease-out;
     animation: none;
 }
 

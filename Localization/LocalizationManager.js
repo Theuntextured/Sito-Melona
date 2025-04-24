@@ -67,6 +67,6 @@ function ApplyLocalization(Data = null){
     }
 
     const LanguageSelector = document.getElementById("LanguageSelector");
-    LanguageSelector.Value = Language;
+    LanguageSelector.value = Language;
     LanguageSelector.addEventListener("change", (e) => {SetLanguage(e.target.value);});
 }

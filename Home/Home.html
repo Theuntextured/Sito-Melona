@@ -7,12 +7,26 @@
         <link rel="stylesheet" href="../NavBar/NavBar.css">
         <script src="../NavBar/NavBar.js" defer></script>
         <script src="Home.js" defer></script>
+        <script type="module" src="../Localization/LocalizationManager.js"></script>
+        
     </head>
 
     <nav>
         <a href = "Home.html" class = "Logo">
             <img src = "../Resources/Logo.png" alt = "Logo" class = "Logo">
         </a>
+        
+    <span id = "NavbarOuter" style="flex-direction: column;">
+        <span id = "LanguageSelectorDiv">
+            <label for="LanguageSelector" class = "localized" content-key = "lang-selector-label" style = "color: white;">Language</label>
+            <select name = "lang" id = "LanguageSelector">
+                <option value = "it">IT</option>
+                <option value = "en">EN</option>
+                <option value = "fr">FR</option>
+                <option value = "de">DE</option>
+            </select>
+        </span>
+        
         <span id = "NavBar">
             <button class = "NavBarButton" onclick = "location.href='Home.html'">
                 <span class = "NavBarButtonText">
@@ -35,6 +49,7 @@
                 </span>
             </button>
         </span>
+    </span>
     </nav>
 
     <body id="Content">
@@ -61,6 +76,9 @@
             </div>
         </div>
 
+        <p class = "localized" content-key = "long-description">
+        </p>
+        <br>
         <footer>
 
         </footer>

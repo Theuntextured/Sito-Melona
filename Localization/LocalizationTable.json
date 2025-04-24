@@ -5,16 +5,6 @@
     "fr": "Français",
     "de": "Deutsch"
   },
-  "placeholder": {
-    "it": "Questo è un paragrafo che dovrebbe essere abbastanza lungo da occupare un bel po di spazio. Non so cosa scrivere quindi continuo a scrivere ciò che scrivo. Non ha senso? Si ha senso, o forse no, non so. Questo è solo per riempire. Continuo a riempire lo spazio in modo più luuuuuuunnnngooooooo possibile. Dovrebbe andare, spero.",
-    "en": "This is a paragraph that should be long enough to take up quite a bit of space. I don't know what to write so I just keep writing what I write. Doesn't it make sense? It does, or maybe not, I don't know. This is just to fill up. I'll keep filling up the space as looooong as I can. This should do, I hope.",
-    "fr": "Il s’agit d’un paragraphe qui devrait être suffisamment long pour occuper un certain espace. Je ne sais pas quoi écrire alors je continue à écrire ce que j'écris. Cela n'a-t-il pas de sens ? Cela a du sens, ou peut-être pas, je ne sais pas. C'est juste pour le remplissage. Je continue à remplir l'espace comme des toilettes... Ça devrait marcher, j'espère.",
-    "de": "Dies ist ein Absatz, der lang genug sein sollte, um ziemlich viel Platz einzunehmen. Ich weiß nicht, was ich schreiben soll, also schreibe ich weiter, was ich schreibe. Ist das nicht sinnvoll? Es macht Sinn, oder vielleicht auch nicht, ich weiß es nicht. Dies dient nur zum Füllen. Ich fülle den Raum weiter aus, also ... Ich hoffe, es sollte funktionieren."
-  },
-  "slogan": {
-    "it": "A pochi passi dal lago di Bolsena, l'Agiturismo Melona dispone di cinque appartamenti indipendenti e di una camera matrimoniale forniti dei comfort necessari a vivere una piacevole esperienza di relax."
-    
-  },
   "lang-selector-label": {
     "it": "Lingua",
     "en": "Language"

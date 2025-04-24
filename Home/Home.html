@@ -18,7 +18,7 @@
         
     <span id = "NavbarOuter" style="flex-direction: column;">
         <span id = "LanguageSelectorDiv">
-            <label for="LanguageSelector" class = "localized" content-key = "lang-selector-label" style = "color: white;">Language</label>
+            <label for="LanguageSelector" class = "localized" localization-key = "lang-selector-label" style = "color: white;">Language</label>
             <select name = "lang" id = "LanguageSelector">
                 <option value = "it">IT</option>
                 <option value = "en">EN</option>
@@ -29,22 +29,22 @@
         
         <span id = "NavBar">
             <button class = "NavBarButton" onclick = "location.href='Home.html'">
-                <span class = "NavBarButtonText">
+                <span class = "NavBarButtonText localized" localization-key = "home">
                     Home           
                 </span>
             </button>
             <button class = "NavBarButton">
-                <span class = "NavBarButtonText">
+                <span class = "NavBarButtonText localized" localization-key = "apartments">
                     Appartamenti
                 </span>
             </button>
             <button class = "NavBarButton">
-                <span class = "NavBarButtonText">
+                <span class = "NavBarButtonText localized" localization-key="what-to-do">
                     Cosa Fare
                 </span>
             </button>
             <button class = "NavBarButton">
-                <span class = "NavBarButtonText">
+                <span class = "NavBarButtonText localized" localization-key="contacts">
                     Contatti                    
                 </span>
             </button>
@@ -76,7 +76,7 @@
             </div>
         </div>
         <div id = "LongDescription">
-            <p class = "localized" content-key = "long-description">
+            <p class = "localized" localization-key = "long-description">
             </p>
             <br>
         </div>

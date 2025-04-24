@@ -95,3 +95,9 @@
     transform: translateX(-50%);
 }
 
+#LongDescription {
+    width: 70%;
+    justify-self: center;
+    text-align: justify;
+    text-justify: inter-word;
+}

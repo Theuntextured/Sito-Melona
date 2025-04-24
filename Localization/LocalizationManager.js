@@ -62,10 +62,8 @@ function ApplyLocalization(Data = null){
     
     for( let i = 0; i < ToLocalize.length; i++){
         const Current = ToLocalize[i];
-        const key = Current.getAttribute("content-key");
+        const key = Current.getAttribute("localization-key");
         Current.innerHTML = GetTextFromKey(key);
-        //let TextNode = document.createTextNode(GetTextFromKey(key)); 
-        //Current.appendChild(TextNode);
     }
 
     const LanguageSelector = document.getElementById("LanguageSelector");

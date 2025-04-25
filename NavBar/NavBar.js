@@ -2,6 +2,15 @@ const navbar = document.querySelector('nav');
 const scrollThreshold = 100;
 const content = document.getElementById("Content");
 
+class NavBar extends HTMLElement {
+    connectedCallback() {
+        fetch('/Navbar/NavBar.html')
+            .then(res => res.text())
+            .then(html => this.innerHTML = html);
+    }
+}
+customElements.define('nav-bar', NavBar);
+
 function OnResize(){
     content.style.paddingTop = `${navbar.offsetHeight}px`;    
 }

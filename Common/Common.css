@@ -1,7 +1,7 @@
 :root{
     --primary-color: #FDF7EE;
-    --secondary-color: #EDB6A3;
-    --tertiary-color: #72C1A6;
+    --secondary-color: #ecc6be;
+    --tertiary-color: #a5cfbe;
     --quaternary-color: #bde3d3;
 }
 
@@ -17,4 +17,13 @@ html{
 
 p {
     font-size: x-large;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: xxx-large;
+}
+
+h2 {
+    font-size: xx-large;
 }

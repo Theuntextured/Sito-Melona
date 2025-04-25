@@ -100,9 +100,15 @@ button.NavBarButton:hover{
     color: var(--primary-color);
     font-size: x-large;
     text-transform: uppercase;
-    font-family: "Droid Serif", serif;
-    font-weight: bold;
+    /*font-weight: bold;*/
     white-space: nowrap;
+}
+
+.NavBarButton:first-child {
+    border-top-left-radius: 8px;
+}
+.NavBarButton:last-child {
+    border-top-right-radius: 8px;
 }
 
 /* Add vertical bar to all but the first button */
@@ -119,13 +125,16 @@ button.NavBarButton:hover{
 
 #LanguageSelectorDiv {
     margin-bottom: 1px;
+    cursor: pointer;
 }
 #LanguageSelector {
     background-color: rgba(0,0,0,0);
     border: none;
     color: white;
+    cursor: pointer;
 }
 
 option {
     color: black;
+    cursor: pointer;
 }

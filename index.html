@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Azienda Agricola Melona - Home</title>
+        <link rel="stylesheet" href="Home/Home.css">
+        <script src="NavBar/NavBar.js" defer></script>
+        <script src="Home/Home.js" defer></script>
+        <script type="module" src="Localization/LocalizationManager.js"></script>
+        
+    </head>
+
+    <NAV-BAR></NAV-BAR>
+    
+    <body id="Content">
+        <header>
+        </header>
+
+        <div id = "SlideshowOuterContainer">
+            <!-- Slideshow container -->
+            <div style = "width: 100%; height: 100%;">
+                <div id = "HomePageSlideshowContainer" style="position: relative; width: 100%; height: 100%; overflow: hidden;">
+                    <!--Slides are inserted here via script.-->
+                </div>
+    
+                <!-- Next and previous buttons -->
+                <a id="SlideshowPrevious" class = "SlideshowControl" onclick="ChangeSlide(-1)">&#10094;</a>
+                <a id="SlideshowNext" class = "SlideshowControl" onclick="ChangeSlide(1)">&#10095;</a>
+                
+                <div id = "ShortDescriptionCarousel" class = "localized" localization-key="short-description-carousel">
+                </div>
+            </div>
+            
+            <br>
+    
+            <!-- The dots/circles -->
+            <div style="text-align:center" id = "HomePageSlideshowDotContainer">
+                <!--Dots are inserted here via script.-->
+            </div>
+        </div>
+        <div id = "LongDescriptionOuterDiv">
+            <div id = "LongDescription">
+                <h2 class = "localized" localization-key = "long-description-title" style = "margin: 0;">
+                </h2>
+                <p class = "localized" localization-key = "long-description">
+                </p>
+                <br>
+            </div>
+        </div>
+        <footer>
+            
+        </footer>
+    </body>
+</html>

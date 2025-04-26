@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8ab27214-ccff-4c2d-a3c0-ac125f876e51" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/Sito-Melona.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/projectSettingsUpdater.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Common/Common.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Home/Home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Home/Home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Localization/LocalizationManager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Localization/LocalizationTable.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Localization/LocalizationTable.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NavBar/NavBar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NavBar/NavBar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NavBar/NavBar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Resources/Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Resources/Questionario di Briefing .docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Resources/Showcase1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Resources/Showcase2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Resources/Showcase3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Resources/Showcase4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Resources/Showcase5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Resources/Showcase6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../index.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2wGtm6DQ2VrcnvoANc5oGLXIdSH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/theun/source/repos/Sito-Melona/source/assets",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-WS-251.23774.424" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8ab27214-ccff-4c2d-a3c0-ac125f876e51" name="Changes" comment="" />
+      <created>1745679893861</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1745679893861</updated>
+      <workItem from="1745679894926" duration="2000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d5619d51-6c6b-42ed-8743-17485b70a6d3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Localization/SupportedLanguages.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/build.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Sito-Melona.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/projectSettingsUpdater.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/Home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/Home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Localization/LocalizationManager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Localization/LocalizationTable.json" beforeDir="false" afterPath="$PROJECT_DIR$/Localization/LocalizationTable.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NavBar/NavBar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NavBar/NavBar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NavBar/NavBar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Questionario di Briefing .docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Showcase1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Showcase2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Showcase3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Showcase4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Showcase5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Showcase6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JSON File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Theuntextured&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Theuntextured/Sito-Melona.git&quot;,
+    &quot;accountId&quot;: &quot;bb863ce5-0288-4ed8-a20e-ee52501183f2&quot;
+  }
+}</component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2vAUlagJ2ouP7bS08OXPpeJvoWK" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Attach to Node.js/Chrome.Unnamed.executor": "Debug",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.Home.html.executor": "Run",
+    "JavaScript Debug.Local Development.executor": "Debug",
+    "JavaScript Debug.index.html.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.generateLocalizedPages.js.executor": "Debug",
+    "Python.Build Development.executor": "Debug",
+    "Python.Build Shipping.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.nodejs.core.library.configured.version": "22.15.0",
+    "javascript.nodejs.core.library.typings.version": "22.15.2",
+    "last_opened_file_path": "C:/Users/theun/source/repos/Sito-Melona",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "C:/Users/theun/AppData/Roaming/JetBrains/Rider2024.2/node/versions/22.15.0/node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\theun\source\repos\Sito-Melona\source\assets" />
+      <recent name="C:\Users\theun\source\repos\Sito-Melona\source" />
+      <recent name="C:\Users\theun\source\repos\Sito-Melona\Home" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.Build Development">
+    <configuration name="Build Development" type="PythonConfigurationType" factoryName="Python">
+      <module name="Sito-Melona" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="SHIPPING_BUILD" value="0" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\theun\source\repos\Sito-Melona" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/build.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Build Shipping" type="PythonConfigurationType" factoryName="Python">
+      <module name="Sito-Melona" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="SHIPPING_BUILD" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\theun\source\repos\Sito-Melona" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/build.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Build Development" />
+      <item itemvalue="Python.Build Shipping" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-WS-251.23774.424" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d5619d51-6c6b-42ed-8743-17485b70a6d3" name="Changes" comment="" />
+      <created>1743587525547</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743587525547</updated>
+      <workItem from="1743587526665" duration="5508000" />
+      <workItem from="1745408569483" duration="432000" />
+      <workItem from="1745409511767" duration="12065000" />
+      <workItem from="1745492474233" duration="3352000" />
+      <workItem from="1745497151156" duration="1000" />
+      <workItem from="1745530036806" duration="1412000" />
+      <workItem from="1745531584535" duration="554000" />
+      <workItem from="1745595630407" duration="1725000" />
+      <workItem from="1745613420614" duration="4237000" />
+      <workItem from="1745662198950" duration="12996000" />
+      <workItem from="1745676833988" duration="512000" />
+      <workItem from="1745677433408" duration="172000" />
+      <workItem from="1745678028534" duration="832000" />
+      <workItem from="1745679289547" duration="641000" />
+      <workItem from="1745680056660" duration="3360000" />
+      <workItem from="1745683466303" duration="593000" />
+      <workItem from="1745684073466" duration="9202000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="/Sito-Melona/source/styles/NavBar.css">
+
+    <a href = "Home.html" class = "Logo">
+        <img src = "/Sito-Melona/source/assets/images/Logo.png" alt = "Logo" class = "Logo">
+    </a>
+    
+    <span id = "NavbarOuter" style="flex-direction: column;">
+        <span id = "LanguageSelectorDiv">
+            <label for="LanguageSelector" style = "color: white; font-weight: bold;">[[lang-selector-label]]</label>
+            <select name = "lang" id = "LanguageSelector">
+                <option value = "it">IT</option>
+                <option value = "en">EN</option>
+                <option value = "fr">FR</option>
+                <option value = "de">DE</option>
+            </select>
+        </span>
+        
+        <span id = "NavBar">
+            <button class = "NavBarButton" onclick = "location.href='index.html'">
+                <span class = "NavBarButtonText">
+                    [[home]]
+                </span>
+            </button>
+            <button class = "NavBarButton">
+                <span class = "NavBarButtonText">
+                    [[apartments]]
+                </span>
+            </button>
+            <button class = "NavBarButton">
+                <span class = "NavBarButtonText">
+                    [[what-to-do]]
+                </span>
+            </button>
+            <button class = "NavBarButton">
+                <span class = "NavBarButtonText">
+                    [[contacts]]
+                </span>
+            </button>
+        </span>
+    </span>

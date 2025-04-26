@@ -1,4 +1,10 @@
 {
+  "lang-code": {
+    "it": "it",
+    "en": "en",
+    "fr": "fr",
+    "de": "de"
+  },
   "lang-name": {
     "it": "Italiano",
     "en": "English",
@@ -36,5 +42,9 @@
   "short-description-carousel" : {
     "it": "Godetevi un'esperienza unica in una posizione esclusiva sul Lago di Bolsena.",
     "en": "Enjoy a unique experience in an exclusive location on Lake Bolsena."
+  },
+  "beach-description-title" : {
+    "it" : "La Spiaggia",
+    "en" : "The Beach"
   }
 }

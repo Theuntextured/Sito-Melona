@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <title>Azienda Agricola Melona - Home</title>
+        <link rel = "stylesheet" href = "/Sito-Melona/built/styles/Home.css">
+        <script src = "/Sito-Melona/built/assets/js/NavBar.js" defer></script>
+        <script src = "/Sito-Melona/built/assets/js/Footer.js" defer></script>
+        <script src = "/Sito-Melona/built/assets/js/Home.js" defer></script>
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    </head>
+    
+    <NAV-BAR></NAV-BAR>      
+    
+    <body id="Content">
+        <header>
+        </header>
+
+        <div class = "scroll-fade" id = "SlideshowOuterContainer">
+            <!-- Slideshow container -->
+            <div style = "width: 100%; height: 100%;">
+                <div id = "HomePageSlideshowContainer" style="position: relative; width: 100%; height: 100%; overflow: hidden;">
+                    <!--Slides are inserted here via script.-->
+                </div>
+    
+                <!-- Next and previous buttons -->
+                <a id="SlideshowPrevious" class = "SlideshowControl" onclick="ChangeSlide(-1)">&#10094;</a>
+                <a id="SlideshowNext" class = "SlideshowControl" onclick="ChangeSlide(1)">&#10095;</a>
+                
+                <div id = "ShortDescriptionCarousel">
+                    Godetevi un'esperienza unica in una posizione esclusiva sul Lago di Bolsena.
+                </div>
+            </div>
+            
+            <br>
+    
+            <!-- The dots/circles -->
+            <div style="text-align:center" id = "HomePageSlideshowDotContainer">
+                <!--Dots are inserted here via script.-->
+            </div>
+        </div>
+        <div class = "scroll-fade" id = "LongDescriptionOuterDiv">
+            <div id = "LongDescription">
+                <h2 style = "margin: 0;">
+                    L'Agriturismo
+                </h2>
+                <p>
+                    A pochi passi dal lago di Bolsena, l'Agiturismo Melona dispone di cinque appartamenti indipendenti e di una camera matrimoniale forniti dei comfort necessari a vivere una piacevole esperienza di relax. La struttura è immersa in circa 10 ettari di terreno con una meravigliosa e suggestiva vista sul lago di Bolsena. Dislocati nel parco circostante vi sono aree pic-nic, barbecue e pergolati da ombra. Oltre al parcheggio privato, è prevista un'ampia spiaggia privata ad uso esclusivo degli ospiti dell'Agiturismo Melona, dotata di lettini prendisole, dove potersi godere la tranquillità e la pace che caratterizza la zona di Bolsena. Per arrivare agli appartamenti, si costeggia un viale di cipressi e ulivi secolari, che distanzia la zona degli appartamenti dalla strada principale. Il clima amichevole, sereno e riservato caratterizzerà il vostro soggiorno.<br><br>
+Innamorati della zona, la famiglia Cellarosi si occupa della gestione di strutture ricettive dislocate sulla zona di Bolsena e dintorni. Roberto, Maria Rosaria e Arianna si occuperanno con passione, dedizione e cura di rendere il vostro soggiorno una piacevole esperienza da voler replicare.<br><br>
+L'Agriturismo Melona si trova a circa 3 km dal centro di Bolsena, delizioso paese dell'Alta Tuscia situato direttamente sulle rive dell'omonimo lago. La struttura, immersa nel verde, si qualifica come posto strategico sia per raggiungere centri di interesse culturale ed enogastronomico (es. Viterbo, Orvieto, Civita di Bagnoregio, Pitigliano ecc) che luoghi di relax e aree termali.
+                </p>
+                <br>
+            </div>
+        </div>
+        <div class = "scroll-fade" id = "BeachDescriptionOuterDiv">
+            <div id = "BeachDescriptionContainer"> 
+                <h2 id = "BeachDescriptionTitle">
+                    La Spiaggia
+                </h2>
+                <p id = "BeachDescription">
+                    [beach-description]
+                </p>
+            </div>
+            <div id = "BeachImagesContainer">
+                <img src = "../assets/images/beach1.jpg" alt = "Beach 1">
+                <img src = "../assets/images/beach1.jpg" alt = "Beach 1">
+                <img src = "../assets/images/beach1.jpg" alt = "Beach 1">
+                <img src = "../assets/images/beach1.jpg" alt = "Beach 1">
+            </div>
+        </div>
+        
+        <footer>
+            <footer-template></footer-template>
+        </footer>
+    </body>
+</html>

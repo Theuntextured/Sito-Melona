@@ -5,33 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5619d51-6c6b-42ed-8743-17485b70a6d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Localization/SupportedLanguages.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/build.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Sito-Melona.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/projectSettingsUpdater.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Home/Home.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Home/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Localization/LocalizationManager.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Localization/LocalizationTable.json" beforeDir="false" afterPath="$PROJECT_DIR$/Localization/LocalizationTable.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NavBar/NavBar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NavBar/NavBar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NavBar/NavBar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Questionario di Briefing .docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Showcase1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Showcase2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Showcase3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Showcase4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Showcase5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Showcase6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/BuildSettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/assets/js/TempLocalization.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/built/en/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/built/en/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/built/it/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/built/it/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/build.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/build.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/assets/js/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/assets/js/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +63,8 @@
     "Attach to Node.js/Chrome.Unnamed.executor": "Debug",
     "DefaultHtmlFileTemplate": "HTML File",
     "JavaScript Debug.Home.html.executor": "Run",
+    "JavaScript Debug.Launch Dev Build It.executor": "Run",
+    "JavaScript Debug.Launch Dev Source.executor": "Run",
     "JavaScript Debug.Local Development.executor": "Debug",
     "JavaScript Debug.index.html.executor": "Debug",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -113,7 +97,16 @@
       <recent name="C:\Users\theun\source\repos\Sito-Melona\Home" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Build Development">
+  <component name="RunManager" selected="JavaScript Debug.Launch Dev Source">
+    <configuration name="Launch Dev Build En" type="JavascriptDebugType" uri="http://localhost:63342/Sito-Melona/built/it/" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="Launch Dev Build It" type="JavascriptDebugType" uri="http://localhost:63342/Sito-Melona/built/it/" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="Launch Dev Source" type="JavascriptDebugType" uri="http://localhost:63342/Sito-Melona/source/" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="Build Development" type="PythonConfigurationType" factoryName="Python">
       <module name="Sito-Melona" />
       <option name="ENV_FILES" value="" />
@@ -163,6 +156,9 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="JavaScript Debug.Launch Dev Build It" />
+      <item itemvalue="JavaScript Debug.Launch Dev Build En" />
+      <item itemvalue="JavaScript Debug.Launch Dev Source" />
       <item itemvalue="Python.Build Development" />
       <item itemvalue="Python.Build Shipping" />
     </list>
@@ -198,7 +194,7 @@
       <workItem from="1745679289547" duration="641000" />
       <workItem from="1745680056660" duration="3360000" />
       <workItem from="1745683466303" duration="593000" />
-      <workItem from="1745684073466" duration="9202000" />
+      <workItem from="1745684073466" duration="14709000" />
     </task>
     <servers />
   </component>

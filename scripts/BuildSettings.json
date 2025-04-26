@@ -1,0 +1,8 @@
+{
+  "ignored-files" : [
+    "/assets/js/TempLocalization.js"
+  ],
+  "html-content-to-strip": [
+    "<script type = \"module\" src = \"/Sito-Melona/source/assets/js/TempLocalization.js\"></script>"
+  ]
+}

@@ -22,7 +22,8 @@ class NavBar extends HTMLElement {
         }
         fetch(path)
             .then(res => res.text())
-            .then(html => this.innerHTML = html);
+            .then(html => this.innerHTML = html)
+            .then(SetupLanguage);
     }
 }
 customElements.define('nav-bar', NavBar);
@@ -48,3 +49,20 @@ window.addEventListener('scroll', function () {
         }
     }
 });
+
+function SetLanguage(lang) {
+    current_link = document.URL;
+    console.log(current_link);
+    let current_language = document.querySelector("html").lang;
+    let new_link = current_link.replace("/" + current_language + "/", "/" + lang + "/");
+    window.location.href = new_link;
+}
+
+function SetupLanguage() {
+    let Language = document.querySelector("html").lang;
+    if (Language.length !== 2)
+        Language = "en"
+    let LanguageSelector = document.getElementById('LanguageSelector');
+    LanguageSelector.value = Language;
+    LanguageSelector.addEventListener("change", (e) => {SetLanguage(e.target.value);});
+}

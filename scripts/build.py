@@ -16,6 +16,12 @@ import json
     - move to their localized folder
 '''
 
+with open("localization/LocalizationTable.json", "r", encoding="utf-8") as json_file:
+    LOCALIZATION_DATA = dict(json.load(json_file))
+
+with open("scripts/BuildSettings.json", "r", encoding="utf-8") as json_file:
+    BUILD_SETTINGS = dict(json.load(json_file))
+
 def create_directory(full_dir : str):
     if not os.path.exists(full_dir):
         os.makedirs(full_dir)
@@ -29,9 +35,6 @@ def process_files_initial(files : list[str]):
 
         with open(path, "w", encoding="utf-8") as f:
             f.write(file_content)
-
-with open("localization/LocalizationTable.json", "r", encoding="utf-8") as json_file:
-    LOCALIZATION_DATA = dict(json.load(json_file))
 
 def get_localized_text(key : str, lang : str):
     if key not in LOCALIZATION_DATA:
@@ -66,6 +69,8 @@ def process_language(language : str, files : list[str]):
 
             file_content = file_content.replace(to_replace, get_localized_text(localization_key, language))
 
+        file_content = file_content.replace("/source/", "/" + language + "/")
+
         new_path = "built\\" + language + path[4:]
         new_path, file_name = new_path.rsplit("\\", 1)
         new_path += "\\"
@@ -91,6 +96,23 @@ def process_localization(files : list[str]):
     for language in supported_languages:
         process_language(language, files)
 
+def strip_files():
+    for path in BUILD_SETTINGS["ignored-files"]:
+        os.remove("temp" + path)
+
+def clear_from_file(path, content_to_remove):
+    with open(path, "r", encoding="utf-8") as f:
+        file_content = f.read()
+    for content in content_to_remove:
+        file_content = file_content.replace(content, "")
+
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(file_content)
+
+def strip_file_content(html_files : list[str], js_files : list[str]):
+    for path in html_files:
+        clear_from_file(path, BUILD_SETTINGS["html-content-to-strip"])
+
 
 def main():
     print("Preparing " + ("shipping" if IS_SHIPPING else "development") + " build...")
@@ -112,7 +134,15 @@ def main():
     try:
         js_files = glob('temp/**/*.js', recursive=True)
         html_files = glob('temp/**/*.html', recursive=True)
+        for file in BUILD_SETTINGS["ignored-files"]:
+            file = "temp" + file.replace("/", "\\")
+            if file in js_files:
+                js_files.remove(file)
+            if file in html_files:
+                html_files.remove(file)
         files_to_process = js_files + html_files
+        strip_files()
+        strip_file_content(html_files, js_files)
         process_files_initial(files_to_process)
         process_localization(html_files)
         move_assets()

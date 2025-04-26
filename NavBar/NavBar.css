@@ -1,14 +1,6 @@
 @import "../Common/Common.css";
 
-.Logo {
-    height: 100%;
-    width: auto;
-    object-fit: contain;
-    cursor: pointer;
-    padding: 0 20px;
-}
-
-nav {
+nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,6 +11,14 @@ nav {
     top: 0;
     left: 0;
     z-index: 999999;
+}
+
+.Logo {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    cursor: pointer;
+    padding: 0 20px;
 }
 
 #NavbarOuter {
@@ -71,12 +71,12 @@ nav {
 }
 
 /* When navbar becomes fixed (floating), trigger fade-out animation */
-nav.fixed {
+nav-bar.fixed {
     animation: ToFixed 0.3s ease forwards;
 }
 
 /* When navbar returns to static, trigger fade-in animation */
-nav.static {
+nav-bar.static {
     animation: ToAbsolute 0.3s ease forwards;
 }
 

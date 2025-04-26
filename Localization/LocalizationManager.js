@@ -59,7 +59,7 @@ function ApplyLocalization(Data = null){
     if(Data != null)
         LocalizationData = Data;
     const ToLocalize = document.getElementsByClassName("localized");
-    
+    document.querySelector("html").lang = Language;
     for( let i = 0; i < ToLocalize.length; i++){
         const Current = ToLocalize[i];
         const key = Current.getAttribute("localization-key");

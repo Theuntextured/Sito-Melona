@@ -3,4 +3,7 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.12" />
   </component>
+  <component name="ProjectResources">
+    <resource url="http://www.sitemaps.org/schemas/sitemap/0.9" location="$PROJECT_DIR$" />
+  </component>
 </project>

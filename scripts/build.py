@@ -2,6 +2,7 @@ import shutil
 import os
 from glob import glob
 import json
+from datetime import datetime
 
 '''
 * clear "built" folder
@@ -88,8 +89,7 @@ def move_assets():
     shutil.move("temp/styles/", "built/")
     print("Assets moved")
 def process_localization(files : list[str]):
-    with open("localization/SupportedLanguages.txt", "r", encoding="utf-8") as file:
-        supported_languages = file.read().splitlines()
+    supported_languages = BUILD_SETTINGS["supported-languages"]
     print("Supported languages: ", end="")
     print(*supported_languages, sep=", ")
 
@@ -117,8 +117,9 @@ def create_redirects(html_files : list[str]):
     print("Creating redirects...")
     with open("scripts/RedirectPageTemplate.html", "r", encoding="utf-8") as template:
         template_content = template.read()
-    with open("localization/SupportedLanguages.txt", "r", encoding="utf-8") as file:
-        supported_languages = file.read().splitlines()
+
+    supported_languages = BUILD_SETTINGS["supported-languages"]
+
     for path in html_files:
         path = path.replace("\\", "/")
         new_path = path.replace("temp/", "built/")
@@ -133,6 +134,61 @@ def create_redirects(html_files : list[str]):
             file_content = template_content.replace("[[SUPPORTED_LANGUAGES]]", str(supported_languages)).replace("[[URL]]", redirect_path)
             f.write(file_content)
 
+def get_page_priority(page : str) -> float | None:
+    key = page.replace("temp/", "/").replace("/index.html", "/")
+    if key in BUILD_SETTINGS["page-priority"]:
+        return BUILD_SETTINGS["page-priority"][key]
+    return None
+def make_priority_string(priority : float | None) -> str:
+    if priority is None:
+        return ""
+    return f"<priority>{priority}</priority>"
+def create_sitemap(html_files : list[str]):
+    with open("scripts/SitemapTemplate.xml", "r", encoding="utf-8") as template:
+        sitemap_template = template.read()
+    with open("scripts/SitemapURLTemplate.xml", "r", encoding="utf-8") as template:
+        sitemap_url_template = template.read()
+    with open("scripts/SitemapURLAltTemplate.xml", "r", encoding="utf-8") as template:
+        sitemap_url_alt_template = template.read()
+
+    date = datetime.today().strftime('%Y-%m-%d')
+    print("Today: ", date)
+
+    urls = ""
+    for path in html_files:
+        path = path.replace("\\", "/")
+        alts = ""
+        main_url = ""
+        for lang in BUILD_SETTINGS["supported-languages"]:
+            new_path = path.replace("temp/", BUILD_SETTINGS["domain"] + lang + "/")
+            new_path = new_path.rsplit("/", 1)[0] + "/"
+            if lang == "it":
+                main_url = new_path
+            current_alt = sitemap_url_alt_template.replace("[[LANGUAGE]]", lang).replace("[[URL]]", new_path)
+            alts = alts + current_alt + "\n"
+
+        current_url = sitemap_url_template.replace("[[URL]]", main_url)
+        current_url = current_url.replace("[[DATE]]", date)
+        current_url = current_url.replace("[[PRIORITY]]", make_priority_string(get_page_priority(path)))
+        current_url = current_url.replace("[[ALTERNATES]]", alts)
+        urls = urls + current_url + "\n"
+
+    sitemap_template = sitemap_template.replace("[[URLS]]", urls)
+    with open("built/sitemap.xml", "x", encoding="utf-8") as f:
+        f.write(sitemap_template)
+
+def create_robots_txt():
+    print("Creating robots.txt")
+    with open("scripts/RobotsTemplate.txt", "r", encoding="utf-8") as f:
+        file_content = f.read()
+
+    file_content = file_content.replace("[[DOMAIN]]", BUILD_SETTINGS["domain"])
+
+    with open("built/robots.txt", "x", encoding="utf-8") as f:
+        f.write(file_content)
+def create_public_data(html_files : list[str]):
+    create_robots_txt()
+    create_sitemap(html_files)
 
 def main():
     print("Preparing " + ("shipping" if IS_SHIPPING else "development") + " build...")
@@ -165,7 +221,9 @@ def main():
         strip_file_content(html_files, js_files)
         process_files_initial(files_to_process)
         process_localization(html_files)
-        create_redirects([x for x in html_files if x.endswith("index.html")])
+        html_pages = [x for x in html_files if x.endswith("index.html")]
+        create_public_data(html_pages)
+        create_redirects(html_pages)
         move_assets()
     finally:
         shutil.rmtree("temp")

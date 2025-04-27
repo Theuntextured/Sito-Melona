@@ -5,12 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5619d51-6c6b-42ed-8743-17485b70a6d3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/scripts/RunLocalServerShipping.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/assets/js/TempLocalization.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/assets/js/TempLocalization.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/build.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/build.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/assets/.idea/assets.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/assets/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/assets/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/assets/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/assets/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/assets/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/assets/js/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/assets/js/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/assets/js/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/assets/js/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/assets/js/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/assets/js/NavBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/components/Footer/Footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/components/Footer/Footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/components/NavBar/NavBar.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/components/NavBar/NavBar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/styles/Footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/styles/Footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/styles/NavBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/styles/NavBar.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +77,7 @@
     "JavaScript Debug.index.html.executor": "Debug",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Node.js.generateLocalizedPages.js.executor": "Debug",
+    "Python.Build And Run Local Server (Shipping).executor": "Run",
     "Python.Build Development.executor": "Run",
     "Python.Build Shipping.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -95,7 +107,7 @@
       <recent name="C:\Users\theun\source\repos\Sito-Melona\Home" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Launch Dev Build It">
+  <component name="RunManager" selected="Python.Build And Run Local Server (Shipping)">
     <configuration name="Launch Dev Build En" type="JavascriptDebugType" uri="http://localhost:63342/Sito-Melona/built/it/" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -103,6 +115,30 @@
       <method v="2" />
     </configuration>
     <configuration name="Launch Dev Source" type="JavascriptDebugType" uri="http://localhost:63342/Sito-Melona/source/" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="Build And Run Local Server (Shipping)" type="PythonConfigurationType" factoryName="Python">
+      <module name="Sito-Melona" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="SHIPPING_BUILD" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\theun\source\repos\Sito-Melona" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/RunLocalServerShipping.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="Build Development" type="PythonConfigurationType" factoryName="Python">
@@ -157,6 +193,7 @@
       <item itemvalue="JavaScript Debug.Launch Dev Build It" />
       <item itemvalue="JavaScript Debug.Launch Dev Build En" />
       <item itemvalue="JavaScript Debug.Launch Dev Source" />
+      <item itemvalue="Python.Build And Run Local Server (Shipping)" />
       <item itemvalue="Python.Build Development" />
       <item itemvalue="Python.Build Shipping" />
     </list>
@@ -193,7 +230,7 @@
       <workItem from="1745680056660" duration="3360000" />
       <workItem from="1745683466303" duration="593000" />
       <workItem from="1745684073466" duration="15151000" />
-      <workItem from="1745745755347" duration="14566000" />
+      <workItem from="1745745755347" duration="21727000" />
     </task>
     <servers />
   </component>

@@ -18,6 +18,38 @@ function SetupSlides() {
         Image.alt = "Showcase " + i.toString();
         ImageContainer.appendChild(Image);
         Image.classList.add("InactiveSlide");
+        Image.onclick = function() {ChangeSlide(1)};
+
+        let startX = 0;
+        let startY = 0;
+
+        Image.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+        });
+
+        Image.addEventListener('touchend', (e) => {
+            const endX = e.changedTouches[0].clientX;
+            const endY = e.changedTouches[0].clientY;
+
+            const diffX = endX - startX;
+            const diffY = endY - startY;
+
+            // Check if it was more horizontal than vertical
+            if (Math.abs(diffX) > Math.abs(diffY)) {
+                if (diffX > 30) {
+                    ChangeSlide(-1);
+                } else if (diffX < -30) {
+                    ChangeSlide(1);
+                }
+            } else {
+                if (diffY > 30) {
+                    //swipe down
+                } else if (diffY < -30) {
+                    //swipe up
+                }
+            }
+        });
 
 
         const Dot = document.createElement("span");

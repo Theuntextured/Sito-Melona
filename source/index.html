@@ -11,65 +11,69 @@
         <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     </head>
 
-    <body id="Content">
+    <body style = "padding: 0; margin: 0;">
 
         <NAV-BAR></NAV-BAR>
-        <header>
-        </header>
 
-        <div class = "scroll-fade" id = "SlideshowOuterContainer">
-            <!-- Slideshow container -->
-            <div style = "width: 100%; height: 100%;">
-                <div id = "HomePageSlideshowContainer" style="position: relative; width: 100%; height: 100%; overflow: hidden;">
-                    <!--Slides are inserted here via script.-->
+        <div  id="Content" style = "margin: 0; padding-top: 64px;">
+            <header>
+            </header>
+
+            <div class = "scroll-fade" id = "SlideshowOuterContainer">
+                <!-- Slideshow container -->
+                <div style = "width: 100%; height: 100%;">
+                    <div id = "HomePageSlideshowContainer" style="position: relative; width: 100%; height: 100%; overflow: hidden;">
+                        <!--Slides are inserted here via script.-->
+                    </div>
+
+                    <!-- Next and previous buttons -->
+                    <a id="SlideshowPrevious" class = "SlideshowControl" onclick="ChangeSlide(-1)">&#10094;</a>
+                    <a id="SlideshowNext" class = "SlideshowControl" onclick="ChangeSlide(1)">&#10095;</a>
+
+                    <div id = "ShortDescriptionCarousel">
+                        [[short-description-carousel]]
+                    </div>
                 </div>
-    
-                <!-- Next and previous buttons -->
-                <a id="SlideshowPrevious" class = "SlideshowControl" onclick="ChangeSlide(-1)">&#10094;</a>
-                <a id="SlideshowNext" class = "SlideshowControl" onclick="ChangeSlide(1)">&#10095;</a>
-                
-                <div id = "ShortDescriptionCarousel">
-                    [[short-description-carousel]]
-                </div>
-            </div>
-            
-            <br>
-    
-            <!-- The dots/circles -->
-            <div style="text-align:center" id = "HomePageSlideshowDotContainer">
-                <!--Dots are inserted here via script.-->
-            </div>
-        </div>
-        <div class = "scroll-fade" id = "LongDescriptionOuterDiv">
-            <div id = "LongDescription">
-                <h2 style = "margin: 0;">
-                    [[long-description-title]]
-                </h2>
-                <p>
-                    [[long-description]]
-                </p>
+
                 <br>
+
+                <!-- The dots/circles -->
+                <div style="text-align:center" id = "HomePageSlideshowDotContainer">
+                    <!--Dots are inserted here via script.-->
+                </div>
             </div>
-        </div>
-        <div class = "scroll-fade" id = "BeachDescriptionOuterDiv">
-            <div id = "BeachDescriptionContainer"> 
-                <h2 id = "BeachDescriptionTitle">
-                    [[beach-description-title]]
-                </h2>
-                <p id = "BeachDescription">
-                    [[beach-description]]
-                </p>
+            <div class = "scroll-fade" id = "LongDescriptionOuterDiv">
+                <div id = "LongDescription">
+                    <h2 style = "margin: 0;">
+                        [[long-description-title]]
+                    </h2>
+                    <p>
+                        [[long-description]]
+                    </p>
+                    <br>
+                </div>
             </div>
-            <div id = "BeachImagesContainer">
-                <img src = "../assets/images/beach1.jpg" alt = "Beach 1">
-                <img src = "../assets/images/beach1.jpg" alt = "Beach 1">
-                <img src = "../assets/images/beach1.jpg" alt = "Beach 1">
-                <img src = "../assets/images/beach1.jpg" alt = "Beach 1">
+            <div class = "scroll-fade" id = "BeachDescriptionOuterDiv">
+                <div id = "BeachDescriptionContainer">
+                    <h2 id = "BeachDescriptionTitle">
+                        [[beach-description-title]]
+                    </h2>
+                    <p id = "BeachDescription">
+                        [[beach-description]]
+                    </p>
+                </div>
+                <div id = "BeachImagesContainer">
+                    <img src = "../assets/images/beach1.jpg" alt = "Beach 1">
+                    <img src = "../assets/images/beach1.jpg" alt = "Beach 1">
+                    <img src = "../assets/images/beach1.jpg" alt = "Beach 1">
+                    <img src = "../assets/images/beach1.jpg" alt = "Beach 1">
+                </div>
             </div>
+
+            <footer>
+                <footer-template></footer-template>
+            </footer>
         </div>
 
-        <footer>
-            <footer-template></footer-template>
-        </footer>
     </body>
 </html>

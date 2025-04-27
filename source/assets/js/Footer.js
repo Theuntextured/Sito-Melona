@@ -4,7 +4,6 @@ class Footer extends HTMLElement {
         let path;
         if(lang.length === 2){
             path = "../" + lang + "/components/Footer/Footer.html"
-            console.log(path);
         }
         else {
             path = '../../components/Footer/Footer.html';

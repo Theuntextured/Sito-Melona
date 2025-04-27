@@ -5,31 +5,45 @@ footer {
     height: 256px;
     width: 100%;
     background-color: var(--secondary-color);
+    overflow: hidden;
 }
 
 #FooterContentContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);  /* 4 equal columns */
     grid-template-rows: auto 200px 1fr;
     grid-gap: 20px;
-    grid-column: span 2;
-    grid-row: span 3;
-    justify-items: center;
-    align-items: center;
-    justify-content: space-between;
-    align-content: space-between;
+
+    justify-items: center;   /* Center horizontally */
+    align-items: start;      /* Align items to the top vertically */
 
     width: 80%;
     height: 50%;
 
     justify-self: center;
 }
-#FooterContentContainer .Logo {
-    width: 100%;
+
+/* Make it responsive for smaller screens */
+@media (max-width: 768px) {
+    #FooterContentContainer {
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns on smaller screens */
+        width: 90%;  /* Slightly increase width for mobile */
+        height: auto;  /* Adjust height automatically */
+    }
 }
+
+@media (max-width: 480px) {
+    #FooterContentContainer {
+        grid-template-columns: 1fr;  /* 1 column on very small screens */
+        width: 100%;
+        height: auto;  /* Adjust height automatically */
+    }
+}
+
+
 #FooterContentContainer p, #FooterContentContainer a {
     font-size: 16px;
-    font-family: 'Times New Roman', Serif
+    font-family: 'Times New Roman', serif;
 }
 
 .SocialIcons {

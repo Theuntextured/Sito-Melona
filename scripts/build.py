@@ -32,7 +32,7 @@ def process_files_initial(files : list[str]):
         with open(path, "r", encoding="utf-8") as f:
             file_content = f.read()
 
-        file_content = file_content.replace("/Sito-Melona/source/", ROOT_PATH)
+        file_content = file_content.replace("/Sito-Melona/source/", root_path)
 
         with open(path, "w", encoding="utf-8") as f:
             f.write(file_content)
@@ -125,8 +125,8 @@ def create_redirects(html_files : list[str]):
         new_path = path.replace("temp/", "built/")
         new_path = new_path.rsplit("/", 1)[0] + "/"
 
-        redirect_path = path.replace("temp/", ROOT_PATH + "${user_language}/")
-
+        redirect_path = path.replace("temp/", root_path + "${user_language}/")
+        redirect_path = redirect_path.replace("/index.html", "/")
 
         if not os.path.exists(new_path):
             os.makedirs(new_path)
@@ -191,7 +191,7 @@ def create_public_data(html_files : list[str]):
     create_sitemap(html_files)
 
 def main():
-    print("Preparing " + ("shipping" if IS_SHIPPING else "development") + " build...")
+    print("Preparing " + ("shipping" if is_shipping else "development") + " build...")
 
     if os.path.exists("built"):
         shutil.rmtree("built")
@@ -229,8 +229,17 @@ def main():
         shutil.rmtree("temp")
 
 
-if __name__ == "__main__":
+is_shipping = False
+root_path = ""
+
+def start_build():
+    global is_shipping
+    global root_path
     print("STARTING BUILD...")
-    IS_SHIPPING = os.environ["SHIPPING_BUILD"] == 1;
-    ROOT_PATH = "/" if IS_SHIPPING else "/Sito-Melona/built/"
+    environment = dict(os.environ)
+    is_shipping = os.environ["SHIPPING_BUILD"] == "1"
+    root_path = "/" if is_shipping else "/Sito-Melona/built/"
     main()
+
+if __name__ == "__main__":
+    start_build()

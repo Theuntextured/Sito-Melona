@@ -8,35 +8,36 @@ String.prototype.rsplit = function(sep, maxsplit) {
 }
 
 class NavBar extends HTMLElement {
-
-
     connectedCallback() {
         let lang = document.querySelector("html").lang;
         let path;
-        if(lang.length === 2){
-            path = "../" + lang + "/components/Navbar/NavBar.html"
+        if (lang.length === 2) {
+            path = "../" + lang + "/components/Navbar/NavBar.html";
             console.log(path);
-        }
-        else {
+        } else {
             path = '../../components/Navbar/NavBar.html';
         }
+
+        // Fetch the navbar HTML asynchronously
         fetch(path)
-            .then(res => res.text())
-            .then(html => this.innerHTML = html)
-            .then(SetupLanguage);
+            .then(res => res.text())  // Get the HTML as text
+            .then(html => {
+                this.innerHTML = html;
+            })
+            .then(() => {
+                // After loading the content, run SetupLanguage and OnResize
+                SetupLanguage();
+                OnScroll();
+            });
     }
 }
 customElements.define('nav-bar', NavBar);
 
-function OnResize(){
-    content.style.paddingTop = `${navbar.offsetHeight}px`;    
-}
+// Initial call to set the padding
+requestAnimationFrame(OnResize); // Use requestAnimationFrame to trigger OnResize after initial rendering
 
-OnResize();
 
-window.addEventListener('resize', OnResize);
-
-window.addEventListener('scroll', function () {
+function OnScroll() {
     if (window.scrollY > scrollThreshold) {
         if (!navbar.classList.contains('fixed')) {
             navbar.classList.add('fixed');
@@ -48,7 +49,13 @@ window.addEventListener('scroll', function () {
             navbar.classList.remove('fixed');  // Remove fixed when static
         }
     }
+}
+
+window.addEventListener('scroll', function () {
+    OnScroll();
 });
+
+OnScroll();
 
 function SetLanguage(lang) {
     current_link = document.URL;

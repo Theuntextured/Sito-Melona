@@ -31,7 +31,7 @@ def process_files_initial(files : list[str]):
         with open(path, "r", encoding="utf-8") as f:
             file_content = f.read()
 
-        file_content = file_content.replace("/Sito-Melona/source/", ("/" if IS_SHIPPING else "/Sito-Melona/built/"))
+        file_content = file_content.replace("/Sito-Melona/source/", ROOT_PATH)
 
         with open(path, "w", encoding="utf-8") as f:
             f.write(file_content)
@@ -113,6 +113,26 @@ def strip_file_content(html_files : list[str], js_files : list[str]):
     for path in html_files:
         clear_from_file(path, BUILD_SETTINGS["html-content-to-strip"])
 
+def create_redirects(html_files : list[str]):
+    print("Creating redirects...")
+    with open("scripts/RedirectPageTemplate.html", "r", encoding="utf-8") as template:
+        template_content = template.read()
+    with open("localization/SupportedLanguages.txt", "r", encoding="utf-8") as file:
+        supported_languages = file.read().splitlines()
+    for path in html_files:
+        path = path.replace("\\", "/")
+        new_path = path.replace("temp/", "built/")
+        new_path = new_path.rsplit("/", 1)[0] + "/"
+
+        redirect_path = path.replace("temp/", ROOT_PATH + "${user_language}/")
+
+
+        if not os.path.exists(new_path):
+            os.makedirs(new_path)
+        with open(new_path + "index.html", "x", encoding="utf-8") as f:
+            file_content = template_content.replace("[[SUPPORTED_LANGUAGES]]", str(supported_languages)).replace("[[URL]]", redirect_path)
+            f.write(file_content)
+
 
 def main():
     print("Preparing " + ("shipping" if IS_SHIPPING else "development") + " build...")
@@ -145,6 +165,7 @@ def main():
         strip_file_content(html_files, js_files)
         process_files_initial(files_to_process)
         process_localization(html_files)
+        create_redirects([x for x in html_files if x.endswith("index.html")])
         move_assets()
     finally:
         shutil.rmtree("temp")
@@ -153,4 +174,5 @@ def main():
 if __name__ == "__main__":
     print("STARTING BUILD...")
     IS_SHIPPING = os.environ["SHIPPING_BUILD"] == 1;
+    ROOT_PATH = "/" if IS_SHIPPING else "/Sito-Melona/built/"
     main()

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    const supported_languages = [[SUPPORTED_LANGUAGES]];
+    let user_language = (navigator.language).split('-')[0];
+    if (!supported_languages.includes(user_language)){
+      user_language = "en";
+    }
+    let url = `[[URL]]`;
+    window.location.replace(url);
+  </script>
+</head>
+<body>
+Redirecting...
+</body>
+</html>

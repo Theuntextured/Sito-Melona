@@ -1,1 +1,55 @@
 @import "/styles/Common.css";
+
+footer {
+    margin-top: 64px;
+    height: 256px;
+    width: 100%;
+    background-color: var(--secondary-color);
+}
+
+#FooterContentContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 200px 1fr;
+    grid-gap: 20px;
+    grid-column: span 2;
+    grid-row: span 3;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    align-content: space-between;
+
+    width: 80%;
+    height: 50%;
+
+    justify-self: center;
+}
+#FooterContentContainer .Logo {
+    width: 100%;
+}
+#FooterContentContainer p, #FooterContentContainer a {
+    font-size: 16px;
+    font-family: 'Times New Roman', Serif
+}
+
+.SocialIcons {
+    width: 32px;
+    text-decoration: none;
+    margin-right: 8px;
+}
+#GoToTopDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#BackToTopButton {
+    background: none;
+    border: none;
+    font-weight: bolder;
+    transition: opacity 0.5s ease;
+}
+
+#BackToTopButton:hover {
+    opacity: 0.5;
+}
